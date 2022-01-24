@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extensionName__",
+  "version": "1.0",
+  "default_locale": "en",
+  "description": "__MSG_extensionDescription__",
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+  "action": {
+    "default_icon": {
+      "19": "Web_Packager_gradient_a_1x.png",
+      "38": "Web_Packager_gradient_a_3x.png"
+    },
+    "default_popup": "dialog.html"
+  },
+  "content_scripts": [
+    {
+      "js": ["content_script.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "default-src 'none'; script-src 'self'; style-src 'unsafe-inline'; connect-src *"
+  },
+  "homepage_url": "https://developers.google.com/search/docs/advanced/experience/signed-exchange",
+  "permissions": [
+    "tabs"
+  ]
+}

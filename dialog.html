@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<style type="text/css">
+body {
+  min-width: 100px; 
+  position: relative;
+  vertical-align:middle;
+}
+
+.label-container {
+  padding-top: 8px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.label-title {
+  font-size: 1.17em;
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+.origin-image {
+  margin-top: -1px;
+}
+
+.cache-image {
+  margin-top: -1px;
+}
+
+.help-container {
+  display: flex;
+  flex-direction: row-reverse;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+.extra-sxg-info {
+  display: block;
+}
+
+</style>
+
+<meta charset="UTF-8">
+<html><head><title>Signed Exchange (SXG) Validator</title></head><body>
+<div class="label-container">
+  <div class="label-title" alt="Origin URL Information">Origin</div>
+  <div class="origin-image" alt="Origin URL State" id="originimg">...</div>
+</div>
+<table border="1" cellpadding="3" style="border-collapse:collapse;">
+  <tr>
+    <td style="min-width:100px" nowrap>URL</td>
+    <td align="right"><span id="url" alt="Origin URL">...</span></td>
+  </tr>
+  <tr>
+    <td style="min-width:100px" nowrap>Content Type</td>
+    <td align="right"><span id="contenttype"
+                            alt="The content type of the origin URL">...</span>
+    </td>
+  </tr>
+</table>
+<div class="extra-sxg-info" id="extra-sxg-info">
+<div class="label-container">
+  <div class="label-title" alt="SXG Cache URL Information">Cache</div>
+  <div class="cacheimage" alt="SXG Cache URL State" id="cacheimg">...</div>
+</div>
+<table border="1" cellpadding="3" style="border-collapse:collapse;">
+  <tr>
+    <td nowrap>URL</td>
+    <td align="right"><span id="cacheurl" alt="SXG Cache URL">...</span></td>
+  </tr>
+  <tr>
+    <td nowrap>Content Type</td>
+    <td align="right"><span id="cachecontenttype"
+                            alt="The content type of the cache URL">...</span>
+    </td>
+  </tr>
+  <tr>
+    <td nowrap>Warning Message</td>
+    <td align="right"><p id="cachewarning"
+                         alt="Warning message regarding cache state">🔄</p></td>
+  </tr>
+  <tr>
+    <td nowrap>Location</td>
+    <td align="right"><span id="cachelocation"
+                            alt="Location of the cache URL">N/A</span></td>
+  </tr>
+</table>
+<div class="label-container">
+  <div class="label-title" alt="SXG Cert Information">Cert</div>
+  <div class="certimage" alt="SXG Cert State" id="certimg">...</div>
+</div>
+<table border="1" cellpadding="3" style="border-collapse:collapse;">
+  <tr>
+    <td nowrap>URL</td>
+    <td align="right"><span id="certurl" alt="SXG Cert URL">N/A</span></td>
+  </tr>
+  <tr>
+    <td nowrap>Content Type</td>
+    <td align="right"><span id="certcontenttype"
+                            alt="SXG Cert Content Type">N/A</span></td>
+  </tr>
+  <tr>
+    <td nowrap>Warning Message</td>
+    <td align="right"><p id="certwarning"
+                         alt="Warning message regarding cert URL">🔄</p></td>
+  </tr>
+  <tr>
+    <td nowrap>Location</td>
+    <td align="right"><span id="certlocation"
+                            alt="Location of cert URL">N/A</span></td>
+  </tr>
+</table>
+</div>
+<div class="help-container">
+  <a href="help.html" target="_blank" alt="Help">Help</a>
+</div>
+<script src="dialog_compiled.js"></script>
+</body></html>
