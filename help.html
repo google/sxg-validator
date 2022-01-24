@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<style type="text/css">
+body {
+  min-width: 100px; 
+  position: relative;
+  vertical-align:middle;
+}
+
+.label-container {
+  padding-top: 8px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.label-title {
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+.origin-image {
+  margin-top: -1px;
+}
+
+.cache-image {
+  margin-top: -1px;
+}
+
+.debug-container {
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+</style>
+
+<meta charset="UTF-8">
+<html><head><title>Signed Exchange (SXG) Validator</title></head><body>
+<h2>Welcome to the help page of the Signed Exchange Validator Chrome Extension.</h2>
+<p>
+    This tool is intended to help website administrators determine the status
+    of their Signed Exchange deployments. It may include the status of the origin
+    URL, its corresponding Google SXG Cache URL as well as the Google SXG Certificate
+    URL.
+</p>
+<div class="label-container">
+  <div class="origin-image" alt="Origin URL State" id="originimg">
+   The different images the tool displays indicates the status of either the origin, cache or cert.
+   <br><br>
+   ... means it's processing.
+   <br>
+   ⌛ means not in cache yet.
+   <br>
+   ✅ means everything's ok.
+   <br>
+   ❌ means there's an error or the URL is not a Signed Exchange.
+   <br>
+  </div>
+</div>
+<table border="1" cellpadding="3" style="border-collapse:collapse;">
+  <tr>
+    <td style="min-width:100px" nowrap>URL</td>
+    <td align="left"><span id="url">The URL of the SXG's origin, cache or SXG certificate.</span></td>
+  </tr>
+  <tr>
+    <td style="min-width:100px" nowrap>Content Type</td>
+    <td align="left"><span id="contenttype">The content type of the URL.</span>
+    </td>
+  </tr>
+  <tr>
+    <td nowrap>Warning Message</td>
+    <td align="left"><p id="cachewarning">
+                     Warning message from the Google Cache server indicating the state of the cache. If this is present, then it indicates an error that prevented the SXG from meeting the cache requirements.</p></td>
+  </tr>
+  <tr>
+    <td nowrap>Location</td>
+    <td align="left"><span id="cachelocation">
+                     The location of the URL. If this is present, then URL has not yet been fetched by the cache. This is not an error in your SXG.</span></td>
+  </tr>
+</table>
+<div class="debug-container">
+    <a href="https://developers.google.com/search/docs/advanced/experience/signed-exchange" target="_blank" alt="Debug">Debugging SXGs</a>
+</div>
+</body></html>
