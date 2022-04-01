@@ -55,6 +55,18 @@ body {
    <br>
    ❌ means there's an error or the URL is not a Signed Exchange.
    <br>
+   If there's an ❌ in the Origin section, it means that your server is not producing a signed exchange.
+   <br>
+   Consult the documentation for your SXG server to determine why.
+   <br>
+   A common cause is a Cache-Control header that prevents public caching, such as no-store or private.
+   <br>
+   If there's an ❌ in the Cache or Cert section, there should be a Warning Message saying why.
+   <br>
+   See <a href="https://github.com/google/webpackager/blob/main/docs/cache_requirements.md" target="_blank" alt="SXG Req">
+     SXG Cache Requirements for details.
+   </a>
+   <br>
   </div>
 </div>
 <table border="1" cellpadding="3" style="border-collapse:collapse;">
