@@ -266,6 +266,11 @@ function setDOMInfo(url) {
     + urlObject.host
     + urlObject.pathname;
 
+  const params = urlObject.searchParams.toString();
+  if (params != "") {
+    cacheUrl = cacheUrl + '?' + params;
+  }
+
   fetch(cacheUrl, {
     method: "GET",
     headers: {
