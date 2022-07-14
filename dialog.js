@@ -251,7 +251,8 @@ function setDOMInfo(url) {
   fetch(url, {
     method: "GET",
     headers: {
-      "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3"}
+      "Accept": "*/*;q=0.8,application/signed-exchange;v=b3",
+    }
   }).then(result => {
     setDisplayFields(result, 'url', 'contenttype', 'originimg');
   })
@@ -274,7 +275,7 @@ function setDOMInfo(url) {
   fetch(cacheUrl, {
     method: "GET",
     headers: {
-      "Accept": "application/signed-exchange;v=b3"
+      "Accept": "application/signed-exchange;v=b3",
     }
   }).then(result => {
     setDisplayFields(result, 'cacheurl', 'cachecontenttype', 'cacheimg');
